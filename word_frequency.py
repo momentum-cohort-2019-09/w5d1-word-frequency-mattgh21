@@ -4,9 +4,6 @@ STOP_WORDS = [
     'will', 'with'
 ]
 
-# def clean_words:
-#     for word in my_words
-
 
 def print_word_freq(file):
     """Read in `file` and print out the frequency of words in that file."""
@@ -22,26 +19,29 @@ def print_word_freq(file):
 
             my_words.append(word)
 
-        # punctuation = my_words.punctuation()
-        # if letter in punctuation:
-        #     letter.replace(" ")
 
-        #     # .replace
-        #     # .strip
-        
-
-
-        # print(my_words)
+        print(my_words)
 
         
+        def clean_text(text):
+            all_letters = "abcdefghijklmnopqrstuvwxyz"
+            keep_text = ""
+            for char in text:
+                if char in all_letters:
+                    keep_text += char
+            return keep_text
+
+        clean_words = []
+
+        for word in my_words:
+            clean_words.append(clean_text(word))
+
+
 
 
 #read in the file -- done
 #split the file into words -- done
 #clean each word -- use .lower and maybe .punctuation
-
-
-
 
 #remove stop words
 
