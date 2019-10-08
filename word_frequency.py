@@ -37,7 +37,19 @@ def print_word_freq(file):
             clean_words.append(clean_text(word))
 
 
-        print(clean_words)
+
+        # remove stop words
+
+        good_words = [word for word in clean_words if word not in STOP_WORDS]
+
+        # words_final = {}
+
+        # for good_word in good_words:
+        #     words_final.update({good_word: good_words.count(good_word)})
+
+
+        print(good_words)
+        # print(clean_words)
 
 
         
@@ -47,8 +59,6 @@ def print_word_freq(file):
 #read in the file -- done
 #split the file into words -- done
 #clean each word -- use .lower and maybe .punctuation
-
-#remove stop words
 
 #calculate frequency of each word -- needs a dictionary
 
